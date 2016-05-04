@@ -1,0 +1,7 @@
+from celery import task
+import time
+
+@task(queue="test")
+def add():
+    time.sleep(20)
+    return 20
